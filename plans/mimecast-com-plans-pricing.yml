@@ -1,0 +1,27 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://projectdiscovery.io/pricing
+sources:
+- https://projectdiscovery.io/pricing
+- https://docs.neo.projectdiscovery.io/concepts/plans.md
+- https://docs.neo.projectdiscovery.io/api-reference/billing/list-subscription-plans.md
+- https://docs.neo.projectdiscovery.io/api-reference/billing/get-credit-balance.md
+name: ProjectDiscovery pricing
+audience: business-product
+pricing_basis: free
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  description: Free tier includes one seat and limited one-time usage.
+- name: Pay As You Go – Base
+  price_text: $200 per seat / month
+  price: 200
+  description: Pay As You Go tier with base weekly usage allowance.
+- name: Enterprise
+  price_text: Custom
+  description: Enterprise tier with custom pricing, unlimited seats, BYOK, SSO/SAML, dedicated VPC, static IPs, org‑level usage controls, and
+    dedicated onboarding.
+docs: https://projectdiscovery.io/pricing
+note: 2 extracted row(s) were dropped because their quote was not on the page.

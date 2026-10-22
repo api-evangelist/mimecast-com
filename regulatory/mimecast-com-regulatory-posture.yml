@@ -1,0 +1,36 @@
+generated: '2026-10-21'
+method: searched
+source: https://docs.neo.projectdiscovery.io/concepts/security-privacy.md
+signals:
+  ai_transparency:
+    evidence:
+      - source: https://docs.neo.projectdiscovery.io/concepts/security-privacy.md
+        http_status: 200
+        fetched: "true"
+        quote: "Neo never trains on your data. Your prompts, source code, vulnerability findings, and all outputs remain exclusively yours."
+        section: "Data Privacy"
+        note: Provider states that its AI models are not trained on customer data, indicating transparency about training data usage.
+  data_residency:
+    evidence:
+      - source: https://docs.neo.projectdiscovery.io/concepts/security-privacy.md
+        http_status: 200
+        fetched: "true"
+        quote: "By default, data is processed and stored in the United States. For organizations with specific residency requirements, we support custom data residency configurations including EU hosting."
+        section: "Data Privacy"
+        note: Indicates default US residency with options for EU hosting.
+  data_retention:
+    evidence:
+      - source: https://docs.neo.projectdiscovery.io/concepts/security-privacy.md
+        http_status: 200
+        fetched: "true"
+        quote: "Retention controls. You can configure custom data retention and auto-deletion policies."
+        section: "Data Privacy"
+        note: Provides ability to set retention and auto-deletion.
+  training_data_summary:
+    evidence:
+      - source: https://docs.neo.projectdiscovery.io/concepts/security-privacy.md
+        http_status: 200
+        fetched: "true"
+        quote: "Neo never trains on your data. Your prompts, source code, vulnerability findings, and all outputs remain exclusively yours."
+        section: "Data Privacy"
+        note: Confirms that customer data is not used for training models.

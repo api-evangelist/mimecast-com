@@ -1,25 +1,126 @@
 aid: mimecast-com
+
 name: ProjectDiscovery
-description: 'ProjectDiscovery is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by accel) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://projectdiscovery.io/images/ProjectDiscovery_share.png
+
+description: 'ProjectDiscovery is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio; backed by accel) and added
+  to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/mimecast-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
-- Company
-apis: []
+- Vulnerability Management
+- Offensive Security
+- Cloud Security
+- Open Source Tools
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- accel
+
 common:
+- type: SecurityTxt
+  url: well-known/mimecast-com-www-security.txt
+- type: Plans
+  url: plans/mimecast-com-plans-pricing.yml
+- type: Spectral
+  url: rules/mimecast-com-rules.yml
+- type: JSONLD
+  url: json-ld/mimecast-com-context.jsonld
+- type: Vocabulary
+  url: vocabulary/mimecast-com-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/mimecast-com-webhooks.yml
+- type: DataModel
+  url: data-model/mimecast-com-data-model.yml
+- type: Compliance
+  url: https://trust.mimecast.com/
+- type: Security
+  url: https://www.mimecast.com/responsible-disclosure/
+- type: Authentication
+  url: authentication/mimecast-com-authentication.yml
+- type: Conformance
+  url: conformance/mimecast-com-conformance.yml
+- type: LLMsTxt
+  url: llms/mimecast-com-llms.txt
+- type: AgentCard
+  url: a2a/mimecast-com-a2a.yml
+- type: WellKnown
+  url: well-known/mimecast-com-well-known.yml
+- type: Hosts
+  url: hosts/mimecast-com-hosts.yml
+- type: Vendors
+  url: vendors/mimecast-com-vendors.yml
+- type: TermsOfService
+  url: https://projectdiscovery.io/terms
+- type: StatusPage
+  url: https://status.mimecast.com/
+- type: PrivacyPolicy
+  url: https://projectdiscovery.io/privacy
+- type: Pricing
+  url: https://projectdiscovery.io/pricing
+- type: GitHubOrganization
+  url: https://github.com/projectdiscovery
+- type: Documentation
+  url: https://docs.neo.projectdiscovery.io/
+- type: DeveloperPortal
+  url: https://portal.mimecast.com/
+- type: Blog
+  url: https://projectdiscovery.io/blog
+- type: GettingStarted
+  url: https://docs.neo.projectdiscovery.io/essentials/quickstart
+- type: APIReference
+  url: https://docs.neo.projectdiscovery.io/api-reference/overview
+- type: TrustCenter
+  url: security/mimecast-com-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/mimecast-com-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/mimecast-com-domain-security.yml
 - type: Website
   url: https://protect-eu.mimecast.com/s/z880CpYolS9jQgjHPbKvp?domain=projectdiscovery.io
+
+apis:
+- name: ProjectDiscovery API
+  description: API documentation for ProjectDiscovery's platform
+  humanURL: https://docs.neo.projectdiscovery.io/
+  baseURL: null
+  aid: mimecast-com:projectdiscovery-api
+- aid: mimecast-com:mimecast-com-api
+  name: ProjectDiscovery API
+  description: 'ProjectDiscovery API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-21);
+
+    not the provider''s own document.'
+  humanURL: https://docs.neo.projectdiscovery.io/api-reference/overview
+  baseURL: https://neo.api.projectdiscovery.io
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/mimecast-com-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/mimecast-com-get-api-v1-sandboxes-response-schema.json
+
+x-backed-by:
+- accel
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 26
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

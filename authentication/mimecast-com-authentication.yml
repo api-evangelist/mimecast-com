@@ -1,0 +1,17 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.neo.projectdiscovery.io/platform/settings/api-key.md
+sources:
+- https://docs.neo.projectdiscovery.io/platform/settings/api-key.md
+- https://docs.neo.projectdiscovery.io/api-reference/github/github-oauth-callback.md
+- https://docs.neo.projectdiscovery.io/api-reference/github/initiate-github-oauth.md
+- https://docs.neo.projectdiscovery.io/api-reference/slack/slack-oauth-callback.md
+description: Authentication methods for Neo API
+schemes:
+- type: apiKey
+  name: X-Api-Key
+  evidence: 'Pass the key in the `X-Api-Key` header on every request:'
+  location: header
+  header: X-Api-Key
+docs: https://docs.neo.projectdiscovery.io/platform/settings/api-key.md

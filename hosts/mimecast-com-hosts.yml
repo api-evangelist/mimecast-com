@@ -1,0 +1,167 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 13
+  own: 8
+  other_domain: 4
+  platform: 1
+  roles:
+  - api
+  - community
+  - docs
+  - identity
+  - marketing
+  - other
+  - portal
+  - security
+  - source
+  - status
+  - website
+hosts:
+- host: api.mimecast.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: mimecast.com
+  role: api
+  relation: own
+- host: community.mimecast.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: mimecast.com
+  role: community
+  relation: own
+- host: docs.neo.projectdiscovery.io
+  found_by:
+  - pointer
+  - apis[]
+  - docs-index
+  - spec-found
+  types:
+  - Documentation
+  - GettingStarted
+  - APIReference
+  serves:
+  - docs
+  - spec
+  registrable_domain: projectdiscovery.io
+  role: docs
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: login.mimecast.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: mimecast.com
+  role: identity
+  relation: own
+- host: neo.api.projectdiscovery.io
+  found_by:
+  - apis[]
+  - vendor-detect
+  types: []
+  serves:
+  - api
+  - cdn
+  vendor: cloudflare
+  registrable_domain: projectdiscovery.io
+  role: api
+  relation: other-domain
+- host: neo.projectdiscovery.io
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: projectdiscovery.io
+  role: other
+  relation: other-domain
+- host: portal.mimecast.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: mimecast.com
+  role: portal
+  relation: own
+- host: projectdiscovery.io
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Pricing
+  - Blog
+  serves: []
+  registrable_domain: projectdiscovery.io
+  role: marketing
+  relation: other-domain
+- host: protect-eu.mimecast.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: mimecast.com
+  role: website
+  relation: own
+- host: status.mimecast.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: mimecast.com
+  role: status
+  relation: own
+- host: trust.mimecast.com
+  found_by:
+  - pointer
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: mimecast.com
+  role: other
+  relation: own
+- host: www.mimecast.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: mimecast.com
+  role: security
+  relation: own

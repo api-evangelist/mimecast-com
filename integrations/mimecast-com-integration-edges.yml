@@ -1,0 +1,22 @@
+generated: '2026-10-21'
+method: none
+source:
+- https://zapier.com/apps/mimecast-com/integrations
+- https://zapier.com/apps/mimecast/integrations
+- https://zapier.com/apps/projectdiscovery/integrations
+- https://n8n.io/integrations/mimecast-com/
+- https://n8n.io/integrations/mimecast/
+- https://composio.dev/toolkits/mimecast-com
+- https://monid.ai/tools/mimecast-com
+checked:
+- https://composio.dev/toolkits/mimecast-com
+- https://monid.ai/tools/mimecast-com
+- https://n8n.io/integrations/mimecast-com/
+- https://n8n.io/integrations/mimecast/
+- https://zapier.com/apps/mimecast-com/integrations
+- https://zapier.com/apps/mimecast/integrations
+- https://zapier.com/apps/projectdiscovery/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

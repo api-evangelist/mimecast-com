@@ -1,0 +1,22 @@
+generated: '2026-10-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: protect-eu.mimecast.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 24 23:59:59 2027 GMT
+  hsts: null
+domains:
+- domain: mimecast.com
+  dnssec: false
+  caa:
+  - 0 issuewild "digicert.com"
+  - 0 issue "amazonaws.com"
+  - 0 issuewild "pki.goog"
+  - 0 issue "pki.goog"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

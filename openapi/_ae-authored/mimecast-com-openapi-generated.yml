@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: ProjectDiscovery API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 2 operation(s) read from 21 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; ProjectDiscovery has published no machine-readable contract that
+    the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 1
+    pages-with-code: 2
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.neo.projectdiscovery.io/api-reference/overview
+  - https://docs.neo.projectdiscovery.io/api-reference/overview.md
+  - https://docs.neo.projectdiscovery.io/api-reference/teams/get-team.md
+  - https://docs.neo.projectdiscovery.io/api-reference/teams/create-team.md
+  - https://docs.neo.projectdiscovery.io/api-reference/teams/update-team.md
+  - https://docs.neo.projectdiscovery.io/api-reference/issues/list-issues.md
+  - https://docs.neo.projectdiscovery.io/api-reference/issues/create-issue.md
+  - https://docs.neo.projectdiscovery.io/api-reference/issues/update-issue.md
+  - https://docs.neo.projectdiscovery.io/api-reference/teams/invite-member.md
+  - https://docs.neo.projectdiscovery.io/api-reference/projects/get-project.md
+  - https://docs.neo.projectdiscovery.io/api-reference/user/get-current-user.md
+  - https://docs.neo.projectdiscovery.io/api-reference/projects/list-projects.md
+  - https://docs.neo.projectdiscovery.io/api-reference/byok/set-model-use-mode.md
+  - https://docs.neo.projectdiscovery.io/api-reference/issues/get-issue-detail.md
+  - https://docs.neo.projectdiscovery.io/api-reference/projects/create-project.md
+  - https://docs.neo.projectdiscovery.io/api-reference/projects/update-project.md
+  - https://docs.neo.projectdiscovery.io/api-reference/teams/accept-invitation.md
+  - https://docs.neo.projectdiscovery.io/api-reference/sandboxes/list-sandboxes.md
+  - https://docs.neo.projectdiscovery.io/api-reference/issues/get-issue-statistics.md
+  - https://docs.neo.projectdiscovery.io/api-reference/tasks/create-task-streamjson.md
+  - https://docs.neo.projectdiscovery.io/api-reference/usage/list-all-stream-usages.md
+servers:
+- url: https://neo.api.projectdiscovery.io
+paths:
+  /api/tasks:
+    get:
+      operationId: get_api_tasks
+      tags:
+      - Api
+      summary: GET /api/tasks
+      x-source: https://docs.neo.projectdiscovery.io/api-reference/overview
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -H \"Authorization: Bearer neo_sk_...\"  https://neo.api.projectdiscovery.io/api/tasks \n API keys are scoped to your organization\
+          \ and follow the same access controls as your user account. \n ​ Base URL \n All endpoints use a single base URL: \n https://neo.api.projectdiscovery.io/api\
+          \ \n ​ Core Resources \n Tasks Create, monitor, and manage security tasks. Tasks are the primary unit of work in Neo. A"
+  /api/v1/sandboxes:
+    get:
+      operationId: get_api_v1_sandboxes
+      tags:
+      - Api
+      summary: List sandboxes
+      description: 'Returns your Neo-managed cloud sandbox and any self-hosted sandboxes you have installed. Self-hosted entries include available
+        actions such as connect and disconnect. Cloud entries may include resource usage while running. Free plan accounts have no persistent
+        cloud sandbox: the list is empty and every task runs in its own temporary workspace, whose files stay available from the task.'
+      x-source: https://docs.neo.projectdiscovery.io/api-reference/sandboxes/list-sandboxes.md
+      responses:
+        '2000':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1SandboxesResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetApiV1SandboxesResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: 'Sandbox list (application/json) – schema: SandboxListResponse'
+        '401':
+          type: string
+          description: 'Unauthorized (application/json) – schema: ErrorResponse'
+        '500':
+          type: string
+          description: 'Internal server error (application/json) – schema: ErrorResponse'
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api

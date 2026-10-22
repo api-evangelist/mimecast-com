@@ -1,0 +1,18 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.neo.projectdiscovery.io/integrations/webhooks.md
+sources:
+- https://docs.neo.projectdiscovery.io/integrations/webhooks.md
+- https://docs.neo.projectdiscovery.io/platform/settings/notifications.md
+- https://docs.neo.projectdiscovery.io/api-reference/ai-connections/submit-a-provider-callback-url-from-a-browser-sign-in.md
+- https://docs.neo.projectdiscovery.io/api-reference/billing/redeem-an-event-promo-code.md
+description: Neo provides a single webhook event that is sent when a task finishes.
+events:
+- event: task.completed
+  description: Sent when a task finishes, containing the completion artifact.
+delivery:
+  retries: none (best‑effort delivery)
+  content_type: application/json
+note: Neo waits up to 15 seconds for the endpoint to respond with a 2xx status. Non‑2xx responses are not retried.
+docs: https://docs.neo.projectdiscovery.io/integrations/webhooks.md
